@@ -1,0 +1,45 @@
+
+ [
+  {
+    "id": 1,
+    "name": "Scented candles",
+    "price": 4.99,
+    "imgUrl": "./images/6fa.jpg"
+  },
+
+
+  {
+    "id": 2,
+    "name": "Perfume for her",
+    "price": 4.50,
+    "imgUrl": "./images/b33.jpg"
+  },
+
+  {
+    "id": 3,
+    "name": "Decorative flask",
+    "price": 3.00,
+    "imgUrl": "./images/31a.jpg"
+  },
+
+  {
+    "id": 4,
+    "name": "A new collection. Interior figurines",
+    "price": 7.00,
+    "imgUrl": "./images/41e1.jpg"
+  },
+
+  {
+    "id": 5,
+    "name": "A new collection. Catalog",
+    "price": 4.50,
+    "imgUrl": "./images/8764c.jpg"
+  },
+
+  {
+    "id": 6,
+    "name": "Spring collection. Catalog",
+    "price": 4.50,
+    "imgUrl": "./images/80d.jpg"
+  }
+   ]
