@@ -1,8 +1,9 @@
 import storeItems from "../data/items.json"
 import {Col, Row} from "react-bootstrap";
 import {StoreItem} from "../components/StoreItem";
+import {v4 as uuidv4} from 'uuid';
 
-export function Store() {
+export function Store(props) {
     return (
         <>
             <h1 className='Color'>Store</h1>
@@ -13,6 +14,9 @@ export function Store() {
                         <StoreItem {...item} />
                     </Col>
                 )}
+
+
+
             </Row>
 
 

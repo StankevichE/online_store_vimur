@@ -6,11 +6,19 @@ import {Store} from "./pages/Store.js";
 import {Contacts} from "./pages/Contacts";
 import {NavbarMenu} from "./components/NavbarMenu";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {useState} from "react";
+import {v4 as uuidv4} from 'uuid';
+
 
 function App() {
+
+
     return (
         <>
-            <NavbarMenu />
+            <NavbarMenu
+
+            />
+
             <Container classname="mb-4">
                 <Routes>
                     <Route path="/" element={<Home />}/>

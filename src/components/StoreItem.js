@@ -1,5 +1,6 @@
 import {Button, Card} from "react-bootstrap";
 import {FormatCurrency} from "../utilities/FormatCurrency";
+import {v4 as uuidv4} from 'uuid';
 
 export function StoreItem({id, name, price, imgUrl}) {
 
