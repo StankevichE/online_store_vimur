@@ -6,11 +6,12 @@ import {Store} from "./pages/Store.js";
 import {Contacts} from "./pages/Contacts";
 import {NavbarMenu} from "./components/NavbarMenu";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {useState} from "react";
-import {v4 as uuidv4} from 'uuid';
-
+import Basket from "./components/Basket";
 
 function App() {
+
+
+
 
 
     return (
@@ -19,11 +20,12 @@ function App() {
 
             />
 
-            <Container classname="mb-4">
+            <Container className="mb-4">
                 <Routes>
                     <Route path="/" element={<Home />}/>
                     <Route path="/store" element={<Store />}/>
                     <Route path="/contacts" element={<Contacts />}/>
+                    <Route path="/basket" element={<Basket />}/>
 
                 </Routes>
 

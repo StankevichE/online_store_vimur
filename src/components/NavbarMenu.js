@@ -1,48 +1,47 @@
 import {
-    Button,
-    Modal,
-    Container,
-    Form,
-    FormControl,
-    Nav,
-    Navbar,
-    NavDropdown,
-    ModalTitle, ModalBody, FormGroup, FormLabel, FormText, ModalHeader, FormCheck,
-} from "react-bootstrap";
+    Button, Modal, Container, Form, FormControl,
+    Nav, Navbar, NavDropdown} from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './logo 3.png'
-import {useState} from "react";
-import ModalContext from "react-bootstrap/ModalContext";
-import * as PropTypes from "prop-types";
-import {
-    MDBContainer,
-    MDBTabs,
-    MDBTabsItem,
-    MDBTabsLink,
-    MDBTabsContent,
-    MDBTabsPane,
-    MDBBtn,
-    MDBIcon,
-    MDBInput,
-    MDBCheckbox,
-    MDBAccordion, MDBCol, MDBCardImage
-} from 'mdb-react-ui-kit';
+import React, {useEffect, useState, Component} from "react";
 
-function ModalContainer(props) {
-    return null;
-}
+import {MDBContainer, MDBTabs, MDBTabsItem, MDBTabsLink, MDBTabsContent, MDBTabsPane, MDBBtn,
+    MDBIcon, MDBInput, MDBCheckbox, MDBCol, MDBCardImage } from 'mdb-react-ui-kit';
 
-ModalContainer.propTypes = {children: PropTypes.node};
+
+
+
 
 export function NavbarMenu() {
+
+    const [searchValue, setSearchvalue] = useState('')
+    // const filterItems = (searchText, listOfItems) =>{
+    //     if (!searchText){
+    //         return listOfItems;
+    //     }
+    //     return listOfItems.filter(({ name })=>
+    //         name.toLowerCase().includes(searchText.toLowerCase())
+    //     );
+    // }
+    // const [itemsList, setItemsList] = useState(data);
+    // const [searchTerm, setSearchTerm] = useState('');
+    // useEffect(()=>{
+    //     const Debounce = setTimeout(()=>{
+    //         const filteredItems = filterItems(searchTerm, data);
+    //         setItemsList(filteredItems);
+    //     }, 100);
+    //     return () => clearTimeout(Debounce);
+    // }, [searchTerm]);
+
+
 
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const [justifyActive, setJustifyActive] = useState('tab1');;
+    const [justifyActive, setJustifyActive] = useState('tab1');
 
     const handleJustifyClick = (value) => {
         if (value === justifyActive) {
@@ -50,7 +49,10 @@ export function NavbarMenu() {
         }
 
         setJustifyActive(value);
+
     };
+
+
 
     return (
         <>
@@ -77,24 +79,33 @@ export function NavbarMenu() {
                     </NavDropdown>
                 </Nav>
 
-                <Form inline="true" className="d-flex p-2 bd-highlight">
+                <Form input="text" className="d-flex p-2 bd-highlight">
                     <FormControl
-                        unline="true"
+                        inline="true"
                         type="text"
                         className="me-sm-2"
                         placeholder="Search"
                         aria-label="Search"
+
+                        onChange={(event) => console.log(event.target.value)}
+
                     />
+
                     <Button variant="outline-warning">Search</Button>
                     <div className="d-flex flex-row-reverse">
                       </div>
+
                 </Form>
->
+
+    >
                 <Button
+                    to="/basket" as={"button"}
                     style={{ width: "2.5rem", height: "2.5rem", position: "relative" }}
                     variant="outline-warning"
-                    className="bi bi-cart"
+                    className="bi bi-cart me-sm-2"
+                    // onClick={handleShowBasket}
                 >
+
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                    className="bi bi-cart" viewBox="0 0 16 16">
                     <path
@@ -124,7 +135,7 @@ export function NavbarMenu() {
                     </div>
                 </Button>
 
->
+
                 <Nav className='btn btn-sm align-middle' >
 
                     <div unline="true"
@@ -155,6 +166,7 @@ export function NavbarMenu() {
 
                 </div>
             </Nav>
+
             </Container>
         </Navbar>
 
